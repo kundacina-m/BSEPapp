@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Museum</string>
+
+    <string-array name="types">
+        <item>Self Signed</item>
+        <item>Intermediate</item>
+        <item>End entity</item>
+    </string-array>
+
+</resources>

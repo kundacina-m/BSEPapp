@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.museum.presentation.certificates.info.InfoCertificateViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvSerial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Serial num"
+            app:layout_constraintStart_toStartOf="@+id/tvOrganization"
+            app:layout_constraintTop_toBottomOf="@+id/labelInfoCertificate" />
+
+        <TextView
+            android:id="@+id/etSerial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSerial"
+            app:layout_constraintStart_toStartOf="@+id/etOrganization"
+            app:layout_constraintTop_toTopOf="@+id/tvSerial" />
+
+        <TextView
+            android:id="@+id/tvOrganization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:text="Organization"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSerial" />
+
+        <TextView
+            android:id="@+id/etOrganization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOrganization"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvOrganization"
+            app:layout_constraintVertical_bias="0.692" />
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Country"
+            app:layout_constraintStart_toStartOf="@+id/tvOrganization"
+            app:layout_constraintTop_toBottomOf="@+id/etOrganization" />
+
+        <TextView
+            android:id="@+id/etCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter country"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCountry"
+            app:layout_constraintStart_toStartOf="@+id/etOrganization"
+            app:layout_constraintTop_toTopOf="@+id/tvCountry" />
+
+        <TextView
+            android:id="@+id/etIssuer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Issuer serial num"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/tvIssuer"
+            app:layout_constraintStart_toStartOf="@+id/etCountry"
+            app:layout_constraintTop_toTopOf="@+id/tvIssuer" />
+
+        <TextView
+            android:id="@+id/tvIssuer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Issuer ser num"
+            app:layout_constraintStart_toStartOf="@+id/tvCountry"
+            app:layout_constraintTop_toBottomOf="@+id/etCountry" />
+
+        <TextView
+            android:id="@+id/labelInfoCertificate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Info Certificate"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvIsCA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Is CA"
+            app:layout_constraintStart_toStartOf="@+id/tvIssuer"
+            app:layout_constraintTop_toBottomOf="@+id/etIssuer" />
+
+        <TextView
+            android:id="@+id/etIsCA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvIsCA"
+            app:layout_constraintStart_toStartOf="@+id/etIssuer"
+            app:layout_constraintTop_toTopOf="@+id/tvIsCA" />
+
+        <TextView
+            android:id="@+id/tvIsRevoked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Is revoked"
+            app:layout_constraintStart_toStartOf="@+id/tvIsCA"
+            app:layout_constraintTop_toBottomOf="@+id/etIsCA" />
+
+        <TextView
+            android:id="@+id/etIsRevoked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/etIsCA"
+            app:layout_constraintTop_toTopOf="@+id/tvIsRevoked" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

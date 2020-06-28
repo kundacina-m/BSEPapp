@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/adminPanelFragment">
+
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="com.example.museum.presentation.admin_panel.AdminPanelFragment"
+        android:label="AdminPanelFragment" >
+        <action
+            android:id="@+id/action_adminPanelFragment_to_listCertificatesFragment"
+            app:destination="@id/listCertificatesFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_addCertificateFragment"
+            app:destination="@id/addCertificateFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_addSelfSignedFragment"
+            app:destination="@id/addSelfSignedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCertificateFragment"
+        android:name="com.example.museum.presentation.certificates.add.AddCertificateFragment"
+        android:label="AddCertificateFragment" />
+    <fragment
+        android:id="@+id/infoCertificateFragment"
+        android:name="com.example.museum.presentation.certificates.info.InfoCertificateFragment"
+        android:label="InfoCertificateFragment" >
+        <argument
+            android:name="certificate"
+            app:argType="com.example.museum.data.model.Certificate" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCertificatesFragment"
+        android:name="com.example.museum.presentation.certificates.list.ListCertificatesFragment"
+        android:label="ListCertificatesFragment" >
+        <action
+            android:id="@+id/action_listCertificatesFragment_to_infoCertificateFragment"
+            app:destination="@id/infoCertificateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSelfSignedFragment"
+        android:name="com.example.museum.presentation.certificates.add.selfsigned.AddSelfSignedFragment"
+        android:label="AddSelfSignedFragment" />
+</navigation>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.museum.presentation.certificates.add.selfsigned.AddSelfSignedViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvOrganization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:text="Organization"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSerial" />
+
+            <EditText
+                android:id="@+id/etOrganization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:hint="Enter organization"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/tvOrganization"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvOrganization"
+                app:layout_constraintVertical_bias="0.692" />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Country"
+                app:layout_constraintStart_toStartOf="@+id/tvOrganization"
+                app:layout_constraintTop_toBottomOf="@+id/etOrganization" />
+
+            <EditText
+                android:id="@+id/etCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter country"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCountry"
+                app:layout_constraintStart_toStartOf="@+id/etOrganization"
+                app:layout_constraintTop_toTopOf="@+id/tvCountry" />
+
+            <Button
+                android:id="@+id/btAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEndDate" />
+
+            <TextView
+                android:id="@+id/labelInfoCertificate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Add Certificate"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Email"
+                app:layout_constraintStart_toStartOf="@+id/tvCountry"
+                app:layout_constraintTop_toBottomOf="@+id/etCountry" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter email"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/tvEmail"
+                app:layout_constraintStart_toStartOf="@+id/etCountry"
+                app:layout_constraintTop_toTopOf="@+id/tvEmail" />
+
+            <EditText
+                android:id="@+id/etStartDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                app:layout_constraintBottom_toBottomOf="@+id/tvStartDate"
+                app:layout_constraintStart_toStartOf="@+id/etEmail"
+                app:layout_constraintTop_toTopOf="@+id/tvStartDate" />
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Start"
+                app:layout_constraintStart_toStartOf="@+id/tvEmail"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="End"
+                app:layout_constraintStart_toStartOf="@+id/tvStartDate"
+                app:layout_constraintTop_toBottomOf="@+id/etStartDay" />
+
+            <EditText
+                android:id="@+id/etEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                app:layout_constraintBottom_toBottomOf="@+id/tvEndDate"
+                app:layout_constraintStart_toStartOf="@+id/etStartDay"
+                app:layout_constraintTop_toTopOf="@+id/tvEndDate" />
+
+            <TextView
+                android:id="@+id/tvSerial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Serial num"
+                app:layout_constraintStart_toStartOf="@+id/tvOrganization"
+                app:layout_constraintTop_toBottomOf="@+id/labelInfoCertificate" />
+
+            <EditText
+                android:id="@+id/etSerial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter serial num"
+                android:inputType="numberSigned|textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSerial"
+                app:layout_constraintStart_toStartOf="@+id/etOrganization"
+                app:layout_constraintTop_toTopOf="@+id/tvSerial" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
